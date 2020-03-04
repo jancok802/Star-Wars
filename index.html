@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+        <title>Star Wars</title>
+    </head>
+    <body>
+        <header>
+            <div class="branding">
+                <img id="logo" src="./slike/logo3.png">
+                <button onclick="getBack()" id="btn">Back!</button>
+                <div id="pop-up">
+                    <p>Hover me for ratings!</p>
+                    <div id="container-chart">
+                      <canvas id="myChart"></canvas>
+                    </div>
+                  </div>
+            </div>
+        </header>
+        <div id="container">
+            
+        </div>
+        <div id="animacija">
+
+        </div>
+        
+        <script src="main.js"></script>
+        <script src="chart.js"></script>
+    </body>
+</html>
