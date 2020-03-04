@@ -1,0 +1,187 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('slike/zvezde.jpg');
+}
+header {
+    height: auto;
+    margin: 2em;
+}
+#branding {
+    float: left;
+}
+#logo {
+    margin: 1em;
+}
+#container {
+    width: 100%;
+    height: max-content;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+#film1 {
+  order: 1;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#film2 {
+  order: 2;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#film3 {
+  order: 3;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.film-data {
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h3, h4, p, a {
+    color: #feda4a;
+    font-family: 'serif Gothic', sans-serif;
+    font-weight: 600;
+}
+a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+img {
+  width: max-content;
+}
+#container img {
+    border: 2px solid yellow;
+}
+  .fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+    z-index: 1;
+  }
+  
+  .star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 700%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: center;
+  }
+  
+  .crawl {
+    position: relative;
+    top: 99880px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+  }
+  
+  .crawl > .title {
+    font-size: 90%;
+    text-align: center;
+    
+  }
+  
+  .crawl > .title h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+  }
+  
+  @keyframes crawl {
+      0% {
+      top: -100px;
+      transform: rotateX(20deg)  translateZ(0);
+    }
+      100% { 
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+  #btn {
+      display: none;
+      background-color: #feda4a;
+      border: none;
+      width: auto;
+      height: 5vh;
+      font-size: large;
+  }
+  #container-chart {
+    width: 800px;
+    height: auto;
+  }
+  #pop-up {
+    float: right;
+    text-align: center;
+    font-size: 1em;
+  }
+  #pop-up #container-chart {
+    visibility: hidden;
+    background-color: transparent;
+    color: #feda4a;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1em 0;
+    width: 400px;
+  }
+
+  #pop-up:hover #container-chart {
+    visibility: visible;
+  }
+  @media only screen and (max-width:  900px){
+    .film {
+      max-width: 50%;
+    }
+    #pop-up {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      justify-content: space-around;
+    }
+    body {
+      overflow: scroll;
+    }
+    .star-wars {
+      font-size: 600%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .film {
+      max-width: 100%;
+    }
+    #logo {
+      display: none !important;
+    }
+    .container {
+      flex-direction: row;
+    }
+    body {
+      overflow: scroll;
+    }
+    .star-wars {
+      font-size: 400%;
+    }
+  }
+
